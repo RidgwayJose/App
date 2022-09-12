@@ -3,11 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App.PlantillaPage">
     <ContentPage.Content>
-        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-
-            <Button x:Name="Boton1" Text="Boton1" BackgroundColor="Red" TextColor="AliceBlue" FontSize="Body" WidthRequest="120" HeightRequest="50" Clicked="Button_Clicked"></Button>
-            <Button x:Name="Boton2" Text="Boton2" Clicked="Button_Clicked_1"></Button>
-            <Entry x:Name="Input" Text=""></Entry>
+        <StackLayout >
+            <Label Text="EJEMPLO 1: " Margin="0,120,0,0"/>
+            <Grid VerticalOptions="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" VerticalOptions="Center" Text="introduce un nombre: " />
+                <Entry Grid.Column="1" x:Name="Input" Text="" ></Entry>
+            </Grid>
+            <Button x:Name="Boton1" HorizontalOptions="Center" CornerRadius="9" Text="Aceptar" Clicked="Boton1_Clicked"></Button>
+            <Label Text="EJEMPLO 2: " Margin="0,30,0,20" />
+            <Button x:Name="Boton2" Text="Boton3" HorizontalOptions="Center" CornerRadius="9" BackgroundColor="Red" TextColor="AliceBlue" FontSize="Body"  Clicked="Boton2_Clicked"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

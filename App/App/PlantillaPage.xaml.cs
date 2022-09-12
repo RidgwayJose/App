@@ -19,28 +19,28 @@ namespace App
 
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+
+        private void Boton1_Clicked(object sender, EventArgs e)
+        {
+            string user = (Input.Text != "") ? Input.Text : "Usuario";
+
+            DisplayAlert("Hola Mundo", $"Bienvenido {user}", "Ok");
+        }
+
+        private void Boton2_Clicked(object sender, EventArgs e)
         {
             num++;
             if (num % 2 == 0)
             {
-                Boton1.BackgroundColor = Color.Red;
-                Boton1.TextColor = Color.White;
+                Boton2.BackgroundColor = Color.Red;
+                Boton2.TextColor = Color.White;
             }
             else
             {
-                Boton1.BackgroundColor = Color.Black;
-                Boton1.TextColor = Color.Aqua;
+                Boton2.BackgroundColor = Color.Black;
+                Boton2.TextColor = Color.Aqua;
             }
         }
-
-        int num = 0;
-
-        private void Button_Clicked_1(object sender, EventArgs e)
-        {
-            string user = (Input.Text != "") ? Input.Text : "Usuario";
-
-            DisplayAlert("Hola Mundo",$"Bienvenido {user}","Ok");
-        }
+        int num;
     }
 }
